@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Package, Clock, CheckCircle, XCircle, Eye, Trash2 } from 'lucide-react';
+import { Package, Clock, CheckCircle, XCircle, Trash2 } from 'lucide-react';
 import { Order } from '../types';
 import { orderService } from '../services/orderService';
 
@@ -18,7 +18,7 @@ export default function AdminPage() {
 
   const handleAuth = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === import.meta.env.VITE_ADMIN_PASSWORD || password === 'admin123') {
+    if (password === import.meta.env.VITE_ADMIN_PASSWORD) {
       setAuthenticated(true);
     } else {
       alert('Mot de passe incorrect');

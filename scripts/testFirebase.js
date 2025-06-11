@@ -2,14 +2,18 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, addDoc, serverTimestamp } from 'firebase/firestore';
 
+// Configuration Firebase - Utiliser dotenv pour les variables d'environnement
+import dotenv from 'dotenv';
+dotenv.config({ path: '../.env' });
+
 // Configuration Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyAEhWnrVJCUQGkUzzXEg5MBmSQYjhyBFvM",
-  authDomain: "asdupropre-e9d0d.firebaseapp.com",
-  projectId: "asdupropre-e9d0d",
-  storageBucket: "asdupropre-e9d0d.appspot.com",
-  messagingSenderId: "1023786095068",
-  appId: "1:1023786095068:web:c7f1d6b9c8c7e6c5f6e4c8"
+  apiKey: process.env.VITE_FIREBASE_API_KEY,
+  authDomain: process.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.VITE_FIREBASE_APP_ID
 };
 
 // Initialiser Firebase

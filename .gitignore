@@ -22,4 +22,16 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Firebase
+*-firebase-adminsdk-*.json
+firebase-debug.log
+
+# Supabase
+.supabase/
 .env
